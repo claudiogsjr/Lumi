@@ -1,0 +1,13 @@
+transformers>=4.42.0
+accelerate>=0.30.0
+torch>=2.2.0
+scikit-learn>=1.2.0
+requests>=2.31.0
+sentencepiece>=0.1.99
+huggingface_hub>=0.23.0
+psutil
+Flask
+gunicorn 
+psycopg2-binary
+google-auth>=2.38.0
+# openai-whisper is installed directly on the server; do not add here to avoid slow restarts

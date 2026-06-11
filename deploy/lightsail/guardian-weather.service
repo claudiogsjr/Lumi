@@ -1,0 +1,17 @@
+[Unit]
+Description=Guardian Weather Watch
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/guardian-weather-watch
+Environment=PORT=8080
+Environment=POSTGRES_ENABLED=1
+EnvironmentFile=/opt/guardian-weather-watch/.env
+ExecStart=/opt/guardian-weather-watch/deploy/lightsail/start_app.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

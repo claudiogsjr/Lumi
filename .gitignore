@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+tmp_ui_test/node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*-key.json
+deploy/lightsail/keys/
+.codex_tmp_ssh*/
+
+# Logs and local data
+*.log
+*.jsonl
+backend.out.log
+backend.err.log
+frontend.out.log
+frontend.err.log
+
+# Build and deploy artifacts
+*.tar
+*.tar.gz
+*.zip
+deploy_bundle.tar.gz
+deploy_chat_response.json
+deploy/lightsail/*.tar.gz
+
+# Temporary/generated project folders
+tmp_guardian_weather_watch/
+tmp_ui_test/
+bkp/
+bkp_old/
+test_artifacts/
+tmp_*.py
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Documentos internos (nao publicar)
+PRODUCTION_TASK_PLAN.md
+PLANO_REVISAO_DISSERTACAO.md

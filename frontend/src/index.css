@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 97%;
+    --foreground: 222 47% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 201 96% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 24% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 20% 91%;
+    --muted-foreground: 215 18% 34%;
+
+    --accent: 210 24% 93%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 142 72% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 214 24% 84%;
+    --input: 214 24% 84%;
+    --ring: 201 96% 32%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 210 29% 96%;
+    --sidebar-foreground: 222 47% 16%;
+    --sidebar-primary: 201 96% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 22% 91%;
+    --sidebar-accent-foreground: 222 47% 16%;
+    --sidebar-border: 214 24% 84%;
+    --sidebar-ring: 201 96% 38%;
+
+    --font-body: "Inter", system-ui, sans-serif;
+    --font-mono: "Roboto Mono", monospace;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 20% 96%;
+
+    --card: 222 40% 14%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 222 40% 14%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 201 96% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 28% 18%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 222 26% 18%;
+    --muted-foreground: 215 16% 68%;
+
+    --accent: 222 28% 18%;
+    --accent-foreground: 210 20% 96%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 142 72% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 222 24% 22%;
+    --input: 222 24% 22%;
+    --ring: 201 96% 52%;
+
+    --sidebar-background: 222 47% 9%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 201 96% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 40% 16%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 222 30% 20%;
+    --sidebar-ring: 201 96% 52%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    min-height: 100dvh;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  .light {
+    color-scheme: light;
+  }
+
+  .light [class*="text-white"] {
+    color: rgb(15 23 42) !important;
+  }
+
+  .light [class*="text-white/90"] {
+    color: rgba(15, 23, 42, 0.92) !important;
+  }
+
+  .light [class*="text-white/85"] {
+    color: rgba(15, 23, 42, 0.85) !important;
+  }
+
+  .light [class*="text-white/80"] {
+    color: rgba(15, 23, 42, 0.8) !important;
+  }
+
+  .light [class*="text-white/75"] {
+    color: rgba(15, 23, 42, 0.75) !important;
+  }
+
+  .light [class*="text-white/70"] {
+    color: rgba(15, 23, 42, 0.7) !important;
+  }
+
+  .light [class*="text-white/65"] {
+    color: rgba(15, 23, 42, 0.66) !important;
+  }
+
+  .light [class*="text-white/60"] {
+    color: rgba(30, 41, 59, 0.72) !important;
+  }
+
+  .light [class*="text-white/55"] {
+    color: rgba(51, 65, 85, 0.7) !important;
+  }
+
+  .light [class*="text-white/50"] {
+    color: rgba(51, 65, 85, 0.68) !important;
+  }
+
+  .light [class*="text-white/45"] {
+    color: rgba(71, 85, 105, 0.78) !important;
+  }
+
+  .light [class*="text-white/40"] {
+    color: rgba(71, 85, 105, 0.72) !important;
+  }
+
+  .light [class*="text-white/38"] {
+    color: rgba(71, 85, 105, 0.68) !important;
+  }
+
+  .light [class*="text-white/35"] {
+    color: rgba(71, 85, 105, 0.64) !important;
+  }
+
+  .light [class*="text-white/30"] {
+    color: rgba(100, 116, 139, 0.82) !important;
+  }
+
+  .light [class*="text-white/25"] {
+    color: rgba(100, 116, 139, 0.76) !important;
+  }
+
+  .light [class*="text-\\[hsl\\(201,96%,72%\\)\\]"] {
+    color: hsl(201 96% 28%) !important;
+  }
+
+  .light [class*="text-\\[hsl\\(201,96%,68%\\)\\]"] {
+    color: hsl(201 96% 30%) !important;
+  }
+
+  .light [class*="text-\\[hsl\\(201,96%,62%\\)\\]"] {
+    color: hsl(201 96% 30%) !important;
+  }
+
+  .light [class*="text-\\[hsl\\(201,96%,52%\\)\\]"] {
+    color: hsl(201 96% 32%) !important;
+  }
+
+  .light [class*="bg-white/[0.03]"] {
+    background-color: rgba(255, 255, 255, 0.78) !important;
+  }
+
+  .light [class*="bg-white/[0.04]"],
+  .light [class*="bg-white/[0.05]"] {
+    background-color: rgba(255, 255, 255, 0.84) !important;
+  }
+
+  .light [class*="bg-white/[0.06]"],
+  .light [class*="bg-white/[0.08]"] {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .light [class*="border-white/[0.06]"],
+  .light [class*="border-white/[0.08]"],
+  .light [class*="border-white/10"] {
+    border-color: rgba(148, 163, 184, 0.35) !important;
+  }
+
+  .light .prose,
+  .light .prose * {
+    color: rgb(15 23 42) !important;
+  }
+
+  .light input,
+  .light textarea,
+  .light select {
+    color: rgb(15 23 42);
+  }
+
+  .light input::placeholder,
+  .light textarea::placeholder {
+    color: rgb(100 116 139) !important;
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .font-mono-data {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* iOS safe-area helpers — requires viewport-fit=cover in the meta tag */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pb-safe-4 {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+  }
+
+  /* Fixed bottom elements: always sit above the home indicator */
+  .bottom-safe {
+    bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
